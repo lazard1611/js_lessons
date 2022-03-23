@@ -18,7 +18,7 @@ let path = {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         pug: [source_folder + '/pug/*.pug', "!" + source_folder + "/pug/_*.pug"],
         css: source_folder + "/scss/style.scss",
-        js: source_folder + "/js/script.js",
+        js: source_folder + "/js/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
     },
