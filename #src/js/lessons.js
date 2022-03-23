@@ -1,21 +1,3 @@
-/*function testWebP(callback) {
-
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    }else{
-        document.querySelector('body').classList.add('no-webp');
-    }
-});*/
-
 // String---------------------
 
 /*const firstName = 'Dmitry';
@@ -42,7 +24,7 @@ str = `
 <ul>
     <li> First name: ${firstName}</li>
     <li> Last name: ${lastName}</li>
-    <li> Age:${age}</li>    
+    <li> Age:${age}</li>
 </ul>
 `;
 
@@ -566,5 +548,3 @@ function handler1(el) {
 //
 // const res = convertToObject(4);
 // console.log(res);
-
-
