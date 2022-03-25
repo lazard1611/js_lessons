@@ -64,3 +64,85 @@
 // }
 //
 // console.log(words(arr));
+
+//__5__
+// const arr = [
+//     {cpu: 'intel', info: {cores:2, сache: 3}},
+//     {cpu: 'intel', info: {cores:4, сache: 4}},
+//     {cpu: 'amd', info: {cores:1, сache: 1}},
+//     {cpu: 'intel', info: {cores:3, сache: 2}},
+//     {cpu: 'amd', info: {cores:4, сache: 2}}
+// ]
+//
+// const sortArr = arr.sort((prev, next) => prev.info.cores - next.info.cores);
+//
+// console.log(sortArr);
+
+//__6__
+
+// let products = [
+//
+//     {title: 'prod1', price: 5.2}, {title: 'prod2', price: 0.18},
+//
+//     {title: 'prod3', price: 15}, {title: 'prod4', price: 25},
+//
+//     {title: 'prod5', price: 18.9}, {title: 'prod6', price: 8},
+//
+//     {title: 'prod7', price: 19}, {title: 'prod8', price: 63}
+//
+// ];
+//
+// function filterCollection(arr, priceMin, priceMax) {
+//     const filterArr = arr.filter((item) => item.price >= priceMin && item.price <= priceMax)
+//     const sortArr = filterArr.sort((a, b) => a.price - b.price);
+//     return sortArr
+// }
+//
+// const res = filterCollection(products, 15, 30);
+// console.log(res);
+
+// =============== Замыкания ====================
+
+//__1__
+/*Создайте функцию которая бы умела делать:
+
+minus(10)(6); // 4
+minus(5)(6); // -1
+minus(10)(); // 10
+minus()(6); // -6
+minus()(); // 0    */
+
+// function minus(x = 0) {
+//     return function calc(num = 0) {
+//         console.log(x - num);
+//         return x - num
+//     }
+// }
+// minus(10)(6);
+// minus(5)(6);
+// minus(10)();
+// minus()(6);
+// minus()();
+
+//__2__
+/*Реализовать функцию, которая умножает и умеет запоминать возвращаемый результат между вызовами:
+
+    function multiplyMaker ...
+const multiply = multiplyMaker(2);
+multiply(2); // 4 (2 * 2)
+multiply(1); // 4 (4 * 1)
+multiply(3); // 12 (4 * 3)
+multiply(10); // 120 (12 * 10)*/
+
+function multiplyMaker(x) {
+    x = 0;
+
+    return function calc(y = 0) {
+        console.log(x * y)
+        return x * y;
+    }
+}
+
+const multiply = multiplyMaker(2);
+
+multiply(2)
