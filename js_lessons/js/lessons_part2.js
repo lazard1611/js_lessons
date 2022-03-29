@@ -254,3 +254,58 @@ d. получить строку-перевертыш
 //
 // module.initNum(10).expNum(2).resNum();
 
+//=================Деструктуризация============================
+
+/*Используя rest оператор и деструктуризацию, создать функцию, которая принимает любое количество аргументов и возвращает объект, содержащий первый аргумент и массив из остатка:
+
+    func(‘a’, ‘b’, ‘c’, ‘d’) →
+{
+    first: ‘a’,
+    other: [‘b’, ‘c’, ‘d’]
+}*/
+
+//__1__
+
+// function func(...item) {
+//     const [first, ...other] = item;
+//         return {
+//         first: first,
+//         other: other
+//     }
+// }
+//
+// console.log(func(1,2,3,4,6,7,8,9));
+
+//__2__
+/*Организовать функцию getInfo, которая принимает объект вида
+{ name: ...,  info: { employees: [...], partners: [ … ]  } }
+и выводит в консоль имя (если имени нет, показывать ‘Unknown’) и первые две компании из массива partners:
+
+    const organisation = {
+        name: 'Google',
+        info: { employees: [‘Vlad’, ‘Olga’], partners: ['Microsoft', 'Facebook', 'Xing']   }
+};
+getInfo(organisation); →
+Name: Google
+Partners: Microsoft Facebook*/
+
+// const organisation = {
+//     name: 'Google',
+//     info: {
+//         employees: ['Vlad', 'Olga'],
+//         partners: ['Microsoft', 'Facebook', 'Xing']
+//     }
+// }
+//
+// function getInfo(x) {
+//     const {name, info: {partners: [item1, item2]}} = x
+//     if (name) {
+//         console.log(`Name: ${name}`)
+//     } else {
+//         console.log('Name: Unknown')
+//     }
+//     console.log(`Partners: ${item1}, ${item2}`);
+// }
+//
+// getInfo(organisation);
+
