@@ -39,21 +39,56 @@ isParent(document.querySelector('ul'), document.querySelector('mark'));
 Функция принимает только DOM объекты.*/
 
 function isParent(parent, child) {
-    let parentColection =  parent.children
+    let curentParent =  child.parentElement;
+    let isParent = false;
 
-    for(let elem of parentColection) {
-        // console.log(elem);
+    while (curentParent) {
+        isParent = parent === curentParent;
+
+        if (isParent) {
+            curentParent = null;
+        } else {
+            curentParent = curentParent.parentElement;
+        }
     }
 
+    // if (isParent) {
+    //     return console.log('Этот элемет родитель');
+    // } else {
+    //     return console.log('Не родитель');
+    // }
 
-    if (parent.querySelector(child) === child ) {
-        return console.log('Этот элемет родитель');
-    } else {
-        return console.log('Не родитель');
-    }
+    return isParent;
 }
+//
+// const child = document.querySelector('mark');
+// const parent = document.body.children[3];
+//
+// isParent(parent, child);
 
-isParent(document.body.children[3], document.querySelector('mark'));
+//__3__
 
-console.log(document.querySelector('mark').parentElement);
+// Получить список всех ссылок, которые не находятся внутри списка ul
 
+// let allLink = document.querySelectorAll('a');
+// let listLink = document.querySelector('ul');
+// let arrLink = [];
+//
+// function getLink() {
+//
+//     allLink.forEach((item) => {
+//         if (isParent(listLink, item)) {
+//             arrLink = arrLink.push(item);
+//         }
+//     })
+// }
+// getLink();
+//
+// console.log(getLink());
+
+//__4__
+// Найти элемент, который находится перед и после списка ul
+
+// let listLink = document.querySelector('ul');
+// console.log(listLink.previousElementSibling);
+// console.log(listLink.nextElementSibling);
