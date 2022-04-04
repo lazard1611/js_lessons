@@ -38,28 +38,28 @@ isParent(document.querySelector('ul'), document.querySelector('mark'));
 // false так ul НЕ является родительским элементом для mark
 Функция принимает только DOM объекты.*/
 
-function isParent(parent, child) {
-    let curentParent =  child.parentElement;
-    let isParent = false;
-
-    while (curentParent) {
-        isParent = parent === curentParent;
-
-        if (isParent) {
-            curentParent = null;
-        } else {
-            curentParent = curentParent.parentElement;
-        }
-    }
-
-    // if (isParent) {
-    //     return console.log('Этот элемет родитель');
-    // } else {
-    //     return console.log('Не родитель');
-    // }
-
-    return isParent;
-}
+// function isParent(parent, child) {
+//     let curentParent =  child.parentElement;
+//     let isParent = false;
+//
+//     while (curentParent) {
+//         isParent = parent === curentParent;
+//
+//         if (isParent) {
+//             curentParent = null;
+//         } else {
+//             curentParent = curentParent.parentElement;
+//         }
+//     }
+//
+//     // if (isParent) {
+//     //     return console.log('Этот элемет родитель');
+//     // } else {
+//     //     return console.log('Не родитель');
+//     // }
+//
+//     return isParent;
+// }
 //
 // const child = document.querySelector('mark');
 // const parent = document.body.children[3];
@@ -92,3 +92,38 @@ function isParent(parent, child) {
 // let listLink = document.querySelector('ul');
 // console.log(listLink.previousElementSibling);
 // console.log(listLink.nextElementSibling);
+
+// ============================Работа с атрибутами элементов=================
+//__1__
+// Найти параграф и получить его текстовое содержимое (только текст!)
+
+// let parag = document.querySelector('p').textContent;
+// console.log(parag);
+
+//__2__
+// Создать функцию, которая принимает в качестве аргумента узел DOM и возвращает информацию (в виде объекта) о типе узла, об имени узла и о количестве дочерних узлов (если детей нет - 0).
+
+// let node = document.querySelector('ul').nextSibling;
+//
+// function infoDOM(node) {
+// return {
+//     type: node.nodeType,
+//     name: node,
+//     numb: node.childNodes.length
+// }
+// };
+//
+// console.log(infoDOM(node));
+
+//__3__
+/*Получить массив, который состоит из текстового содержимого ссылок внутри списка: getTextFromUl(ul) ---> ["Link1", "Link2", "Link3"]*/
+
+const link = document.querySelector('ul').querySelectorAll('a');
+
+let arrLink = [];
+
+link.forEach((item) => {
+    arrLink.push(item.href);
+})
+
+console.log(arrLink);
