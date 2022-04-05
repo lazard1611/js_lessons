@@ -25,6 +25,11 @@ body {
   width: 100%;
 }
 
+.active {
+  font-weight: 700;
+  color: tomato;
+}
+
 li:not(:last-child) {
   margin-bottom: 1rem;
 }
@@ -127,4 +132,93 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+.spoiler {
+  margin: 5rem 0;
+  border: 2px solid aqua;
+}
+
+.spoiler__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  background: aqua;
+  cursor: pointer;
+}
+
+.spoiler__content {
+  padding: 2rem;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  -o-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.spoiler__content.spoiler__content--active {
+  opacity: 1;
+}
+
+.accordion {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #000;
+}
+
+.accordion__item {
+  padding: 1rem;
+  border-radius: .6rem;
+  background: tomato;
+  cursor: pointer;
+}
+
+.accordion__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.accordion__title:after,
+.accordion__title:before {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: #000;
+  content: '';
+}
+
+.accordion__title {
+  padding-right: 3rem;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.accordion__title:before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.accordion__item.accordion__item--active .accordion__title:before {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.accordion__content {
+  padding: 1rem 0;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: #925B4E;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
 }

@@ -38,28 +38,28 @@ isParent(document.querySelector('ul'), document.querySelector('mark'));
 // false так ul НЕ является родительским элементом для mark
 Функция принимает только DOM объекты.*/
 
-function isParent(parent, child) {
-    let curentParent =  child.parentElement;
-    let isParent = false;
+// function isParent(parent, child) {
+//     let curentParent =  child.parentElement;
+//     let isParent = false;
 
-    while (curentParent) {
-        isParent = parent === curentParent;
+//     while (curentParent) {
+//         isParent = parent === curentParent;
 
-        if (isParent) {
-            curentParent = null;
-        } else {
-            curentParent = curentParent.parentElement;
-        }
-    }
+//         if (isParent) {
+//             curentParent = null;
+//         } else {
+//             curentParent = curentParent.parentElement;
+//         }
+//     }
 
-    // if (isParent) {
-    //     return console.log('Этот элемет родитель');
-    // } else {
-    //     return console.log('Не родитель');
-    // }
+//     // if (isParent) {
+//     //     return console.log('Этот элемет родитель');
+//     // } else {
+//     //     return console.log('Не родитель');
+//     // }
 
-    return isParent;
-}
+//     return isParent;
+// }
 //
 // const child = document.querySelector('mark');
 // const parent = document.body.children[3];
@@ -92,3 +92,37 @@ function isParent(parent, child) {
 // let listLink = document.querySelector('ul');
 // console.log(listLink.previousElementSibling);
 // console.log(listLink.nextElementSibling);
+
+// let link = document.querySelector('.spoiler__title');
+// let content = document.querySelector('.spoiler__content');
+//
+// link.addEventListener('click', (e) => {
+//     content.classList.toggle('spoiler__content--active');
+// })
+
+//===========accordion============
+
+const accordion = document.querySelectorAll('.accordion__item');
+// const text = document.querySelector('.accordion__content');
+// text.styles.height = '0'
+
+for(let item of accordion) {
+    let classItem = item.className + '--active';
+    let contentHeight = item.lastElementChild.clientHeight;
+    let content = item.lastElementChild;
+
+
+    item.addEventListener('click', function () {
+        this.classList.toggle(classItem);
+        // if (contentHeight.clientHeight > 0) {
+        //     content.style.height = '0'
+        // } else {
+        //     content.style.height = 'auto'
+        // }
+
+    })
+
+}
+
+
+
