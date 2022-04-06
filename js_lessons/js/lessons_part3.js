@@ -100,29 +100,48 @@ isParent(document.querySelector('ul'), document.querySelector('mark'));
 //     content.classList.toggle('spoiler__content--active');
 // })
 
+//==================Обрадотчик событий===================
+
+//__1__
+// По нажатию на кнопку "btn-msg" должен появиться алерт с тем текстом который находится в атрибуте data-text у кнопки.
+
 //===========accordion============
 
-const accordion = document.querySelectorAll('.accordion__item');
-// const text = document.querySelector('.accordion__content');
-// text.styles.height = '0'
+function accordion(item, mod = false) {
+    const accordion = document.querySelectorAll(item);
 
-for(let item of accordion) {
-    let classItem = item.className + '--active';
-    let contentHeight = item.lastElementChild.clientHeight;
-    let content = item.lastElementChild;
+    for(let item of accordion) {
+        let classItem = item.firstElementChild.className + '--active';
+        let content = item.lastElementChild;
+        let head = item.firstElementChild;
 
+        content.style.maxHeight = 0;
+        content.style.overflow = 'hidden';
+        content.style.transition = 'max-height .3s ease-in-out';
 
-    item.addEventListener('click', function () {
-        this.classList.toggle(classItem);
-        // if (contentHeight.clientHeight > 0) {
-        //     content.style.height = '0'
-        // } else {
-        //     content.style.height = 'auto'
-        // }
+        head.addEventListener('click', function () {
+            if (mod === true) {
+                for(let el of accordion) {
+                    el.firstElementChild.classList.remove(classItem);
 
-    })
+                    el.lastElementChild.style.maxHeight = 0;
+                    // console.dir(el.firstElementChild.classList);
+                }
+            }
 
+            this.classList.toggle(classItem);
+
+            if (this.classList.contains(classItem)) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = 0;
+            }
+        })
+    }
 }
+
+accordion('.accordion__item', true);
+
 
 
 

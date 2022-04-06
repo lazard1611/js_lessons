@@ -165,12 +165,11 @@ button:focus {
 }
 
 .accordion__item {
-
+  position: relative;
   padding: 1rem;
   //min-width: 40rem;
   border-radius: .6rem;
   background: tomato;
-  cursor: pointer;
 
   &:not(:last-child) {
     margin-bottom: 1rem;
@@ -194,6 +193,7 @@ button:focus {
   position: relative;
   font-size: 1.8rem;
   font-weight: 700;
+  cursor: pointer;
 
   &:after {
     @extend %plus;
@@ -203,22 +203,16 @@ button:focus {
     @extend %plus;
     transform: rotate(90deg);
     transition: transform .3s ease;
-    .accordion__item.accordion__item--active & {
-      transform: rotate(0deg);
-    }
+  }
+
+  &.accordion__title--active:before {
+    transform: rotate(0deg);
   }
 }
 
-.accordion__content {
+.accordion__content_in {
   padding: 1rem 0;
-  transition: all .3s ease-in-out;
   background: #925B4E;
-  transform: translateY(-100%);
-
-
-  .accordion__item.accordion__item--active & {
-    //height: auto;
-  }
-
+  border-radius: .4rem;
 }
 
