@@ -6,15 +6,6 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select>
       <path>
@@ -25,8 +16,22 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db6ac5e8-82b1-4297-a265-cf80d27a7a50" name="Default Changelist" comment="add accordion">
+    <list default="true" id="db6ac5e8-82b1-4297-a265-cf80d27a7a50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/#src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#src/js/lessons_part3.js" beforeDir="false" afterPath="$PROJECT_DIR$/#src/js/lessons_part3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/#src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/#src/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/gsap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/gsap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/gsap.min.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/gsap.min.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/jquery-2.2.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/jquery-2.2.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/jquery-2.2.4.min.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/jquery-2.2.4.min.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/lessons_part3.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/lessons_part3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/lessons_part3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/lessons_part3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_lessons/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js_lessons/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +42,27 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lazarev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="27NBqqvA9MeAXHnTcaaSSh2aZGm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kingsview" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -61,16 +76,9 @@
       <option name="presentableId" value="Default" />
       <updated>1649150867796</updated>
       <workItem from="1649150879093" duration="428000" />
-      <workItem from="1649151456417" duration="18368000" />
+      <workItem from="1649151456417" duration="17450000" />
+      <workItem from="1649228346830" duration="15193000" />
     </task>
-    <task id="LOCAL-00001" summary="add accordion">
-      <created>1649187228286</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1649187229223</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,27 +106,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add accordion" />
-    <option name="LAST_COMMIT_MESSAGE" value="add accordion" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="432" y="200" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1649153379772">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="432" y="200" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.728@0.0.1366.728" timestamp="1649153379772" />
-    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1649153377116">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="869" y="212" key="EditFileWatcherDialog" timestamp="1649245428942">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="869" y="212" key="EditFileWatcherDialog/0.0.1600.860@0.0.1600.860" timestamp="1649245428942" />
+    <state x="541" y="124" key="FileChooserDialogImpl" timestamp="1649230387385">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1649153377116" />
+    <state x="541" y="124" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1649230387385" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1649151941493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1649151941493" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1649187774724">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="907" y="136" width="585" height="592" key="find.popup" timestamp="1649249411216">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1649187774724" />
+    <state x="907" y="136" width="585" height="592" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1649249411216" />
   </component>
 </project>

@@ -166,10 +166,10 @@ button:focus {
 }
 
 .accordion__item {
+  position: relative;
   padding: 1rem;
   border-radius: .6rem;
   background: tomato;
-  cursor: pointer;
 }
 
 .accordion__item:not(:last-child) {
@@ -193,6 +193,7 @@ button:focus {
   position: relative;
   font-size: 1.8rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .accordion__title:before {
@@ -206,19 +207,14 @@ button:focus {
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
-.accordion__item.accordion__item--active .accordion__title:before {
+.accordion__title.accordion__title--active:before {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.accordion__content {
+.accordion__content_in {
   padding: 1rem 0;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   background: #925B4E;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
+  border-radius: .4rem;
 }
