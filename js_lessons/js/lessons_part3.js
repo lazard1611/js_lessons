@@ -105,42 +105,53 @@ isParent(document.querySelector('ul'), document.querySelector('mark'));
 //__1__
 // По нажатию на кнопку "btn-msg" должен появиться алерт с тем текстом который находится в атрибуте data-text у кнопки.
 
-//===========accordion============
+// const btn = document.getElementById('btn-msg');
+// const btnData = btn.getAttribute('data-text');
+// btn.addEventListener('click', el => {
+//     alert(btnData);
+// })
 
-function accordion(item, mod = false) {
-    const accordion = document.querySelectorAll(item);
+//__2__
+//При наведении указателя мыши на "btn-msg", кнопка становится красной; когда указатель мыши покидает кнопку, она становится прежнего цвета. Цвет менять можно через добавление класса.
 
-    for(let item of accordion) {
-        let classItem = item.firstElementChild.className + '--active';
-        let content = item.lastElementChild;
-        let head = item.firstElementChild;
+// const btn = document.getElementById('btn-msg');
 
-        content.style.maxHeight = 0;
-        content.style.overflow = 'hidden';
-        content.style.transition = 'max-height .3s ease-in-out';
+// btn.addEventListener('mouseover', ()=> {
+//     btn.style.background = 'red';
+// });
 
-        head.addEventListener('click', function () {
-            if (mod === true) {
-                for(let el of accordion) {
-                    el.firstElementChild.classList.remove(classItem);
+// btn.addEventListener('mouseout', ()=> {
+//     btn.style.background = 'white';
+// });
 
-                    el.lastElementChild.style.maxHeight = 0;
-                    // console.dir(el.firstElementChild.classList);
-                }
-            }
+//__3__
+// При нажатии на любой узел документа показать в элементе с id=tag имя тега нажатого элемента.
+// const tagEl = document.getElementById('tag');
 
-            this.classList.toggle(classItem);
+// document.addEventListener('click', (e) => {
+//     e.preventDefault;
+//     let el = e.target.nodeName
+//     tagEl.innerHTML = `Tag: ${el}`    
+// })
 
-            if (this.classList.contains(classItem)) {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = 0;
-            }
-        })
+//__4__
+// При нажатии на кнопку btn-generate добавлять в список ul элемент списка Li с текстом Item + порядковый номер Li по списку, т.е Item 3, Item 4 и т.д 
+
+const btn = document.getElementById('btn-generate');
+const list = document.querySelector('.list_item');
+
+btn.addEventListener('click', () => {
+    let countItem = list.querySelectorAll('li').length;
+    let count = countItem;
+    count += 1;
+
+    for (let i = countItem; i < count; i++) {
+        const li = document.createElement('li');
+        li.textContent = `Item ${i + 1}`
+        list.appendChild(li);
     }
-}
+})
 
-accordion('.accordion__item', true);
 
 
 
